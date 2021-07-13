@@ -2,13 +2,13 @@
 
 (for visualizing positively skewed longitudinal data)
 
-![](.media/cover_02.png)
+![Static Demo of shell plot](img/cover_02.png)
 
 ## Introduction
 
 This repository introduces a new plot type for positively skewed longitudinal data. It is written for the R statistical language. Contact me on [LinkedIn](https://www.linkedin.com/in/david-d-haese-bab30652/) for help or suggestions.
 
-See the [tutorial]() on how to prepare this or similar _interactive_ plot from _scratch_ plus some examples.
+See the [tutorial](https://ddhaese.github.io/Project_Shell-Plot/Demo.html) on how to prepare this or similar _interactive_ plot from _scratch_ plus some examples.
 
 ## Quick start
 
@@ -97,12 +97,12 @@ waves %>%
 
 Often, when we observe natural phenomena, the distribution of the total observation period is long-tailed. This limits the capacity to visualize events that take place during these observations. Several years ago, I realised there is a simple solution for this problem and that is to bend the observation axis into a circle.
 
-![](.media/cover_03.png)
+![Comparison barplot versus shell plot](img/cover_03.png)
 
 Now, I revisited this plot and decided to make it using vector-based graphics (SVG) and add some interactivity. I haven't wrapped the code into an R package yet, let me know if you would find it useful.
 
-## Cite
+## Cite (thank you)
 
 To site this work:
 
-D'Haese D. (2021) Shellplot for visualizing positively skewed longitudinal data. Accessed on yyy-mm-dd. url: 
+D'Haese D. (2021) Shellplot for visualizing positively skewed longitudinal data. Accessed on yyy-mm-dd. url: https://github.com/ddhaese/Project_Shell-Plot
