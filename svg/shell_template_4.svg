@@ -1,0 +1,18 @@
+<div class="shell-plot">
+  <svg viewBox="-.7 -1.1 .7 1.1" width="200" height="200">
+    <g fill="none" stroke-width=".002" stroke="#00B0F0">
+      <line x1="+0.0" y1="-1.1" x2="0.0" y2="2.2" />
+      <line x1="-1.1" y1="+0.0" x2="2.2" y2="0.0" />
+      <rect x="-1" y="-1" width="2" height="2" />
+      <circle cx="0" cy="0" r=".3" />
+    </g>
+    <g>
+      {{#legend}}
+      <rect x="{{Symbol_X}}" y="{{Symbol_Y}}" width="{{Symbol_Dim}}" height="{{Symbol_Dim}}" fill="{{Symbol_Color}}"
+        stroke="{{Symbol_Stroke_Color}}"  stroke-width="{{Symbol_Stroke_Width}}"/>
+      <text x="{{Lab_X}}" y="{{Lab_Y}}" text-anchor="start" font-size="{{Lab_Dim}}" fill="{{Lab_Color}}"
+        stroke="none">{{Label}}</text>
+      {{/legend}}
+    </g>
+  </svg>
+</div>

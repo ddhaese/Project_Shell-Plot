@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+body {
+  background-color: #323232;
+}
+
+div.shell {
+  display: flex;
+  font-family: "Roboto", sans-serif;
+}
+
+div.shell-infobox {
+  margin-top: 60px;
+  width: 300px;
+  height: 300px;
+  font-size: .8em;
+}
+
+div.shell-infobox aside table {
+  background-color: #323232;
+  width:100%;
+}
+
+col.prop-label {
+  width: 40%;
+}
+
+caption {
+  font-weight: bold;
+  padding-left: 6px;
+  color: white;
+  background-color: #646464;
+  margin: 10px 0;
+}
+
+.shell-message {
+  font-size: .7em;
+  color: white;
+  margin: 0;
+}
+
+g.shell-episodes path.highlight {
+  stroke: yellow;
+  stroke-width: .003;
+}
+
+g.shell-observations path.highlight {
+  stroke: cyan;
+  fill: cyan;
+  stroke-width: .003;
+}

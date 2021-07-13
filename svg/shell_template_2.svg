@@ -1,0 +1,16 @@
+<svg viewBox="-.7 -1.1 1.4 2.2" width="200" height="200">
+  <g fill="none" stroke="#00B0F0" stroke-width=".002">
+    <line x1="+0.0" y1="-1.1" x2="0.0" y2="2.2" />
+    <line x1="-1.1" y1="+0.0" x2="2.2" y2="0.0" />
+    <rect x="-1" y="-1" width="2" height="2" />
+    <circle cx="0" cy="0" r=".3" />
+  </g>
+  <g fill="none" stroke="#00B0F0" stroke-width=".02">
+    <path d="
+      M {{X_Start_Outer}} {{Y_Start_Outer}}
+      A {{R_Outer}} {{R_Outer}} {{Delta_Angle}} {{Large_Arc}} 1 {{X_End_Outer}} {{Y_End_Outer}}
+      L {{X_End_Inner}} {{Y_End_Inner}}
+      A {{R_Inner}} {{R_Inner}} {{Delta_Angle}} {{Large_Arc}} 0 {{X_Start_Inner}} {{Y_Start_Inner}}
+      L {{X_Start_Outer}} {{Y_Start_Outer}}" />
+  </g>
+</svg>
