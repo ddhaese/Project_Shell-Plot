@@ -1,0 +1,83 @@
+<div id="{{shell-id}}" class="shell"
+    data-infobox-class="shell-infobox"
+    data-infobox-template="infobox-template"
+    data-episode-details-headers="{{headers}}">
+  <script>{{{javascript}}}</script>
+  <style type="text/css" scoped>{{{css}}}</style>
+  {{{infobox_template}}}
+  <div class="shell-plot" width="{{width}}" height="{{height}}"><svg
+      viewBox="{{layout.viewbox}}"
+      width="{{width}}"
+      height="{{height}}"
+      zoom="1">
+      <g
+        class="shell-subject-labels"
+        font-size="{{layout.m}}"
+        fill="{{style.font.color}}">
+        {{#subjects}}
+        <text x="{{Lab_X}}"  y="{{Lab_Y}}" text-anchor="end">{{Subject}}</text>
+        {{/subjects}}
+      </g>
+      <g
+        class="shell-observations"
+        fill="{{style.obs.fill}}"
+        stroke="{{style.obs.line_col}}"
+        stroke-width="{{style.obs.line_width}}">
+        {{#subjects}}
+        <path id="{{Subject_ID}}" d="
+        M {{X_Start_Outer}} {{Y_Start_Outer}}
+        A {{R_Outer}} {{R_Outer}} {{Delta_Angle}} {{Large_Arc}} 1
+          {{X_End_Outer}} {{Y_End_Outer}}
+        L {{X_End_Inner}} {{Y_End_Inner}}
+        A {{R_Inner}} {{R_Inner}} {{Delta_Angle}} {{Large_Arc}} 0
+          {{X_Start_Inner}} {{Y_Start_Inner}}
+        Z" />
+        {{/subjects}}
+      </g>
+      <g
+        class="shell-episodes"
+        stroke-width="{{style.epi.line_width}}"
+        stroke="{{style.epi.line_col}}" 
+        >
+        {{#episodes}}
+        <path fill="{{Fill}}" data-episode-details="{{Data}}"
+          data-observation="{{Subject_ID}}" d="
+        M {{X_Start_Outer}} {{Y_Start_Outer}}
+        A {{R_Outer}} {{R_Outer}} {{Delta_Angle}} {{Large_Arc}} 1
+          {{X_End_Outer}} {{Y_End_Outer}}
+        L {{X_End_Inner}} {{Y_End_Inner}}
+        A {{R_Inner}} {{R_Inner}} {{Delta_Angle}} {{Large_Arc}} 0
+          {{X_Start_Inner}} {{Y_Start_Inner}}
+        Z" />
+        {{/episodes}}
+      </g>
+      <g class="shell-legend">
+        <text x="{{layout.fx}}" y="{{layout.fy}}" text-anchor="start"
+          font-size="{{layout.o}}" stroke="none" transform="translate(0 -{{layout.aa}})"
+          fill="{{style.font.color}}">{{layout.legend_title}}</text>
+        {{#layout.legend}}<g class="shell-legend-item">
+        <rect x="{{layout.fx}}" y="{{Symbol_Y}}"
+          width="{{layout.q}}" height="{{layout.q}}"
+          fill="{{Color}}" stroke="{{style.epi.line_col}}"
+          stroke-width="{{style.epi.line_width}}"/>
+        <text x="{{Lab_X}}" y="{{Lab_Y}}" text-anchor="start"
+          font-size="{{layout.o}}" stroke="none"
+          fill="{{style.font.color}}">{{Label}}</text>
+        </g>{{/layout.legend}}
+      </g>
+      <g class="shell-gridlines" font-size="{{layout.m}}">
+        {{#layout.gridlines}}<g class="shell-gridline">
+        <line x1="{{Start_X}}" y1="{{Start_Y}}" x2="{{End_X}}" y2="{{End_Y}}"
+          stroke="{{style.gridlines.color}}"
+          stroke-width="{{style.gridlines.width}}" />
+        <text x="{{Lab_X}}" y="{{Lab_Y}}" text-anchor="{{Anchor}}"
+          fill="{{style.font.color}}" font-size="{{layout.h}}">{{Label}}</text>
+        </g>{{/layout.gridlines}}
+        <circle cx="0" cy="0" r="{{layout.a}}"        
+          stroke-width="{{style.gridlines.width}}" 
+          stroke="{{style.gridlines.color}}" fill="none" />
+      </g>
+    </svg>
+  </div>
+  <div class="shell-infobox"></div>
+</div>

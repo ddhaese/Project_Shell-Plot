@@ -1,0 +1,38 @@
+default:
+  layout:
+    a: .10  # Size of the central hole in the plot in user units (UU)
+    b: .02  # Space between subject labels and subject axis (UU)
+    c: .05  # Space between gridline and gridline label (UU)
+    d: .01  # Overshoot of the gridline beyond data sectors (UU)
+    e: .90  # Relative width of the episode sector versus observation width (m)
+    fx: -.4 # Legend left (UU)
+    fy: -1  # Legend top (UU)
+    g: .008 # Space between legend symbols and legend labels (UU)
+    h: .04  # Font size of gridline labels (UU)
+    k: .05  # Spacer with outer edge of plot in any direction (UU)
+    o: .03  # Font size of legend labels (UU)
+    p: .04  # Line height of legend items (UU)
+    q: .03  # Symbol dimensions (in x and y) of legend symbols (UU)
+    s: .5 # Angular spacers at the end of observation axis (rad) 
+    v: -.24 # Relative shift of subject labels versus m
+    u: -.24 # Relative shift of legend labels versus m
+    w: .025 # Relative shift of gridline labels (UU)
+    z: .1   # Angular spacer to account for gridline length
+    aa: .04   # Spacer between legend and its title
+    unit: ""
+    legend_title: ""
+  style:
+    digits: 4
+    font:
+      family: Roboto
+      color: "white"
+    obs:   # Observations
+      line_Width: 0
+      line_col: none
+      fill: "#646464"
+    epi:   # Episodes
+      line_width: 0
+      line_col: none
+    gridlines: # Grid lines
+        color: "white"
+        width: .004

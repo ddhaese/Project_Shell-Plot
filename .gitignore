@@ -1,6 +1,11 @@
 # History files
 .Rhistory
 .Rapp.history
+.backup
+.vscode
+
+# Creating of images, not for public
+.media
 
 # Session Data files
 .RData

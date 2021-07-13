@@ -1,0 +1,13 @@
+<svg viewBox="-.7 -1.1 1.4 2.2" width="{{width}}" height="{{height}}">
+  <g fill="none" stroke="#00B0F0" stroke-width=".004">
+    <line x1="0" y1="-1.1" x2="0" y2="2.2" />
+    <line x1="-.7" y1="0" x2="1.4" y2="0" />
+    <rect x="-1" y="-1" width="2" height="2" />
+    <circle cx="0" cy="0" r="{{layout.a}}" />
+  </g>
+  <g font-size="{{layout.m}}">
+    {{#subjects}}
+    <text x="{{Lab_X}}"  y="{{Lab_Y}}" text-anchor="end">{{Subject}}</text>
+    {{/subjects}}
+  </g>
+</svg>
